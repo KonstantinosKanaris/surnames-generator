@@ -1,0 +1,55 @@
+#-----------------------------------------------------------------------------------
+# Configure one or more experiments, each representing a separate training process
+# with its own set of training parameters. While this configuration allows for
+# hyperparameter tuning, its primary objective is not focused on identifying the
+# optimal hyperparameters. Instead, the purpose of this configuration is to provide
+# predefined optimal hyperparameters for different models, facilitating comparison
+# of these models on the same data.
+#-----------------------------------------------------------------------------------
+# - checkpoints_dir         : The directory path to save checkpoints during training.
+# - data_path               : The csv path to the training data.
+# - experiments             : List of training experiments.
+# - num_epochs              : An integer indicating how many epochs to train for.
+# - batch_size              : How many samples per batch to load.
+# - optimizer_name          : The name of the optimizer to use for training.
+# - model_name              : The name of the model to train. Available models:
+#                             `simple_rnn_generator`, `gru_generator`, `lstm_generator`.
+# - loss_name               : The name of the loss function to use.
+# - lr_patience             : Number of epochs to wait before reducing the learning
+#                             rate.
+# - lr_reduce_factor        : How much to reduce the learning rate, i.e. lr * factor
+# - patience                : Number of epochs to wait before early stopping.
+# - delta                   : Minimum change in monitored quantity to qualify as an
+#                             improvement.
+# - embedding_dim           : Dimensions of character embeddings.
+# - hidden_size             : Hidden size of `rnn`, `gru` or `lstm` model.
+# - dropout                 : Dropout value to apply after the `rnn`, `gru or `lstm`
+#                             layer.
+# - num_layers              : Number of `rnn`, `gru` or `lstm` layers.
+# - with_condition          : If ``True`` the surname nationalities will be also passed
+#                             as an input in the `rnn`, `gru` or `lstm` layer(s).
+# - lr                      : The learning rate of the optimizer.
+#-----------------------------------------------------------------------------------
+checkpoints_dir: ./checkpoints
+data_path: ./data/surnames/processed/train.csv
+
+experiments:
+  -
+    general_hyperparameters:
+      num_epochs: 300
+      batch_size: 64
+      optimizer_name: adam
+      model_name: lstm_generator
+      loss_name: nll
+      lr_patience: 3
+      lr_reduce_factor: 0.25
+      ea_patience: 7
+      ea_delta: 0
+    model_init_params:
+      embedding_dim: 50
+      hidden_size: 50
+      dropout: 0.1
+      num_layers: 1
+      with_condition: True
+    optimizer_init_params:
+      lr: 0.001

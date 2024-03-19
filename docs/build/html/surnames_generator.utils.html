@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>surnames_generator.utils package &mdash; surnames-generator  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="surnames_generator.factories package" href="surnames_generator.factories.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            surnames-generator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">surnames_generator</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="surnames_generator.html">surnames_generator package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="surnames_generator.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="surnames_generator.data.html">surnames_generator.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surnames_generator.engine.html">surnames_generator.engine package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="surnames_generator.factories.html">surnames_generator.factories package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">surnames_generator.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="surnames_generator.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surnames_generator.html#module-surnames_generator.controllers">surnames_generator.controllers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surnames_generator.html#module-surnames_generator.models">surnames_generator.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="surnames_generator.html#module-surnames_generator">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">surnames-generator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">surnames_generator</a></li>
+          <li class="breadcrumb-item"><a href="surnames_generator.html">surnames_generator package</a></li>
+      <li class="breadcrumb-item active">surnames_generator.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/surnames_generator.utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="surnames-generator-utils-package">
+<h1>surnames_generator.utils package<a class="headerlink" href="#surnames-generator-utils-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-surnames_generator.utils.aux">
+<span id="surnames-generator-utils-aux-module"></span><h2>surnames_generator.utils.aux module<a class="headerlink" href="#module-surnames_generator.utils.aux" title="Link to this heading"></a></h2>
+<p>Contains various utility functions for PyTorch model training.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="surnames_generator.utils.aux.Timer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.aux.</span></span><span class="sig-name descname"><span class="pre">Timer</span></span><a class="headerlink" href="#surnames_generator.utils.aux.Timer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Context manager to count elapsed time.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">do_something</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">Timer</span><span class="p">()</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="n">do_something</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invocation of f took </span><span class="si">{</span><span class="n">t</span><span class="o">.</span><span class="n">elapsed</span><span class="si">}</span><span class="s2">s!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="surnames_generator.utils.aux.load_general_checkpoint">
+<span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.aux.</span></span><span class="sig-name descname"><span class="pre">load_general_checkpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#surnames_generator.utils.aux.load_general_checkpoint" title="Link to this definition"></a></dt>
+<dd><p>Loads a general checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>torch.nn.Module</em>) – The model to be updated with its saved <cite>state_dict</cite>.</p></li>
+<li><p><strong>optimizer</strong> (<em>torch.optim.Optimizer</em>) – The optimizer to be updated with its saved <cite>state_dict</cite>.</p></li>
+<li><p><strong>filepath</strong> (<em>str</em>) – The file path of the general checkpoint.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>‘model’: The updated model with its saved <cite>state_dict</cite>.</p></li>
+<li><p>’optimizer’: The updated optimizer with its saved <cite>state_dict</cite>.</p></li>
+<li><p>’epoch’: The epoch value from the last checkpoint.</p></li>
+<li><p>’loss’: The loss value from the last checkpoint.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing the following keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="surnames_generator.utils.aux.load_yaml_file">
+<span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.aux.</span></span><span class="sig-name descname"><span class="pre">load_yaml_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#surnames_generator.utils.aux.load_yaml_file" title="Link to this definition"></a></dt>
+<dd><p>Loads a <cite>yaml</cite> configuration file into a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> (<em>str</em>) – The path to the <cite>yaml</cite> file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The configuration parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="surnames_generator.utils.aux.set_seeds">
+<span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.aux.</span></span><span class="sig-name descname"><span class="pre">set_seeds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#surnames_generator.utils.aux.set_seeds" title="Link to this definition"></a></dt>
+<dd><p>Sets random seeds for torch operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Random seed to set (default=42).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-surnames_generator.utils.vectorizers">
+<span id="surnames-generator-utils-vectorizers-module"></span><h2>surnames_generator.utils.vectorizers module<a class="headerlink" href="#module-surnames_generator.utils.vectorizers" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="surnames_generator.utils.vectorizers.CharacterVectorizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.vectorizers.</span></span><span class="sig-name descname"><span class="pre">CharacterVectorizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char_vocab</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#surnames_generator.utils.vocabulary.SequenceVocabulary" title="surnames_generator.utils.vocabulary.SequenceVocabulary"><span class="pre">SequenceVocabulary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_vocab</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#surnames_generator.utils.vocabulary.Vocabulary" title="surnames_generator.utils.vocabulary.Vocabulary"><span class="pre">Vocabulary</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#surnames_generator.utils.vectorizers.CharacterVectorizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Responsible for implementing character-level based
+vectorization of an input text sequence.</p>
+<p>Each character in the input text sequence is substituted
+with its corresponding index in the character vocabulary.</p>
+<p>The input text sequence is converted into two 1-D tensors
+of integers. Refer to the <code class="docutils literal notranslate"><span class="pre">vectorize()</span></code> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>char_vocab</strong> (<a class="reference internal" href="#surnames_generator.utils.vocabulary.SequenceVocabulary" title="surnames_generator.utils.vocabulary.SequenceVocabulary"><em>SequenceVocabulary</em></a>) – Vocabulary constructed
+from dataset’s collection of text characters.</p></li>
+<li><p><strong>category_vocab</strong> (<a class="reference internal" href="#surnames_generator.utils.vocabulary.Vocabulary" title="surnames_generator.utils.vocabulary.Vocabulary"><em>Vocabulary</em></a>) – Vocabulary constructed
+from dataset’s categories.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create data (surnames dataset)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Russian&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span> <span class="s2">&quot;Irish&quot;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s2">&quot;surname&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Shakhmagon&quot;</span><span class="p">,</span> <span class="s2">&quot;Verney&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruadhain&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="go">  nationality     surname</span>
+<span class="go">0     Russian  Shakhmagon</span>
+<span class="go">1     English      Verney</span>
+<span class="go">2       Irish    Ruadhain</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create the vectorizer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CharacterVectorizer</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">surnames_df</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Vectorize a surname</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observations</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Verney&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observations</span>
+<span class="go">tensor([ 2, 12, 13, 14, 11, 13, 15,  0])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">targets</span>
+<span class="go">tensor([12, 13, 14, 11, 13, 15,  3,  0])</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vectorizers.CharacterVectorizer.from_dataframe">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#surnames_generator.utils.vectorizers.CharacterVectorizer" title="surnames_generator.utils.vectorizers.CharacterVectorizer"><span class="pre">CharacterVectorizer</span></a></span></span><a class="headerlink" href="#surnames_generator.utils.vectorizers.CharacterVectorizer.from_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Instantiates the <cite>CharacterVectorizer</cite> from a dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – The dataset’s dataframe.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An instance of the <cite>CharacterVectorizer</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vectorizer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vectorizers.CharacterVectorizer.vectorize">
+<span class="sig-name descname"><span class="pre">vectorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#surnames_generator.utils.vectorizers.CharacterVectorizer.vectorize" title="Link to this definition"></a></dt>
+<dd><p>Converts an input text sequence into two 1-D tensors
+of integers.</p>
+<p>The first tensor is for the token observations (<cite>X</cite>), and
+consist of all character indexes of the input text sequence
+except the last one. The second tensor is for the token targets
+(<cite>y</cite>), and consist of all characters of the input text sequence
+except the first one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – The text sequence to be vectorized into a tensor
+of observations and a tensor of targets.</p></li>
+<li><p><strong>vector_length</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the output 1-D tensors . -1 means
+the length of the input tokenized text (default=-1).</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Returns: observations, targets</dt><dd><ul class="simple">
+<li><p><strong>observations</strong>: tensor of shape <span class="math notranslate nohighlight">\((L)\)</span></p></li>
+<li><p><strong>targets</strong>: tensor of shape <span class="math notranslate nohighlight">\((L)\)</span></p></li>
+</ul>
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    L ={} &amp; \text{sequence length} \\
+\end{aligned}\end{split}\]</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-surnames_generator.utils.vocabulary">
+<span id="surnames-generator-utils-vocabulary-module"></span><h2>surnames_generator.utils.vocabulary module<a class="headerlink" href="#module-surnames_generator.utils.vocabulary" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.vocabulary.</span></span><span class="sig-name descname"><span class="pre">SequenceVocabulary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_to_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unk_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;UNK&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;MASK&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin_seq_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;BEGIN&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_seq_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;END&gt;'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#surnames_generator.utils.vocabulary.Vocabulary" title="surnames_generator.utils.vocabulary.Vocabulary"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vocabulary</span></code></a></p>
+<p>Bundles four special tokens used for sequence data.</p>
+<p>The special tokens are: the <cite>UNK</cite> token, the <cite>MASK</cite> token,
+the <cite>BEGIN-OF-SEQUENCE</cite> token, and the <cite>END-OF-SEQUENCE</cite>
+token where:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>* `UNK`: The unknown token used for unseen out-of-vocabulary
+input tokens
+* `MASK`: Enables handling variable-length inputs
+* `BEGIN-OF-SEQUENCE`: Start of sequence boundary
+* `END-OF-SEQUENCE`: End of sequence boundary
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token_to_idx</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>, </em><em>optional</em>) – A pre-existing map of tokens to indices. Defaults
+to <cite>None</cite>.</p></li>
+<li><p><strong>mask_token</strong> (<em>str</em><em>, </em><em>optional</em>) – The representation of the
+<cite>MASK</cite> token. Defaults to <cite>&lt;MASK&gt;</cite>.</p></li>
+<li><p><strong>unk_token</strong> (<em>str</em><em>, </em><em>optional</em>) – The representation of the
+<cite>UNK</cite> token. Defaults to <cite>&lt;UNK&gt;</cite>.</p></li>
+<li><p><strong>begin_seq_token</strong> (<em>str</em><em>, </em><em>optional</em>) – The representation of
+the <cite>BEGIN-OF-SEQUENCE</cite> token. Defaults to <cite>&lt;BEGIN&gt;</cite>.</p></li>
+<li><p><strong>end_seq_token</strong> (<em>str</em><em>, </em><em>optional</em>) – The representation of
+the <cite>END-OF-SEQUENCE</cite> token. Defaults to <cite>&lt;END&gt;</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.token_to_idx">
+<span class="sig-name descname"><span class="pre">token_to_idx</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.token_to_idx" title="Link to this definition"></a></dt>
+<dd><p>A dictionary mapping tokens to indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">idx_to_token</span> <span class="pre">(Dict[int,</span> <span class="pre">str]</span></span></dt>
+<dd><p>A dictionary mapping indices to tokens.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary._unk_token">
+<span class="sig-name descname"><span class="pre">_unk_token</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary._unk_token" title="Link to this definition"></a></dt>
+<dd><p>The representation of the <cite>UNK</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary._mask_token">
+<span class="sig-name descname"><span class="pre">_mask_token</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary._mask_token" title="Link to this definition"></a></dt>
+<dd><p>The representation of the <cite>MASK</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary._begin_seq_token">
+<span class="sig-name descname"><span class="pre">_begin_seq_token</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary._begin_seq_token" title="Link to this definition"></a></dt>
+<dd><p>The representation of the
+<cite>BEGIN-OF-SEQUENCE</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary._end_seq_token">
+<span class="sig-name descname"><span class="pre">_end_seq_token</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary._end_seq_token" title="Link to this definition"></a></dt>
+<dd><p>The representation of the
+<cite>END-OF-SEQUENCE</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.unk_index">
+<span class="sig-name descname"><span class="pre">unk_index</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.unk_index" title="Link to this definition"></a></dt>
+<dd><p>Index associated with the <cite>UNK</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.mask_index">
+<span class="sig-name descname"><span class="pre">mask_index</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.mask_index" title="Link to this definition"></a></dt>
+<dd><p>Index associated with the <cite>MASK</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.begin_seq_index">
+<span class="sig-name descname"><span class="pre">begin_seq_index</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.begin_seq_index" title="Link to this definition"></a></dt>
+<dd><p>Index associated with the
+<cite>BEGIN-OF-SEQUENCE</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.end_seq_index">
+<span class="sig-name descname"><span class="pre">end_seq_index</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.end_seq_index" title="Link to this definition"></a></dt>
+<dd><p>Index associated with the
+<cite>END-OF-SEQUENCE</cite> token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.lookup_token">
+<span class="sig-name descname"><span class="pre">lookup_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.lookup_token" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the index associated with the token or
+the <cite>UNK</cite> index if token isn’t found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – The token to look up.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index corresponding to the token.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><cite>unk_index</cite> needs to be &gt;=0 (having been added into
+the <cite>Vocabulary</cite>) for the <cite>UNK</cite> functionality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.SequenceVocabulary.to_serializable">
+<span class="sig-name descname"><span class="pre">to_serializable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.SequenceVocabulary.to_serializable" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary that can be serialized.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">surnames_generator.utils.vocabulary.</span></span><span class="sig-name descname"><span class="pre">Vocabulary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_to_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Creates a vocabulary object which maps tokens to indices
+and vice versa.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token_to_idx</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em><em>, </em><em>optional</em>) – A pre-existing mapping of tokens to indices. Defaults
+to <cite>None</cite>.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.token_to_idx">
+<span class="sig-name descname"><span class="pre">token_to_idx</span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.token_to_idx" title="Link to this definition"></a></dt>
+<dd><p>A dictionary mapping tokens to indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">idx_to_token</span> <span class="pre">(Dict[int,</span> <span class="pre">str]</span></span></dt>
+<dd><p>A dictionary mapping indices to tokens.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.add_many">
+<span class="sig-name descname"><span class="pre">add_many</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.add_many" title="Link to this definition"></a></dt>
+<dd><p>Updates the mapping dictionaries based on a
+list of input tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tokens</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A list of string tokens.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of indices corresponding</dt><dd><p>to the tokens.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.add_token">
+<span class="sig-name descname"><span class="pre">add_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.add_token" title="Link to this definition"></a></dt>
+<dd><p>Updates the mapping dictionaries based on the
+provided token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – The token to be added to the
+vocabulary.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index corresponding to the token.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.from_serializable">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_serializable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#surnames_generator.utils.vocabulary.Vocabulary" title="surnames_generator.utils.vocabulary.Vocabulary"><span class="pre">Vocabulary</span></a></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.from_serializable" title="Link to this definition"></a></dt>
+<dd><p>Instantiate a <cite>Vocabulary</cite> object from a serializable
+dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>contents</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – The serialized dictionary.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A vocabulary object instantiated from</dt><dd><p>the provided serialized data.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#surnames_generator.utils.vocabulary.Vocabulary" title="surnames_generator.utils.vocabulary.Vocabulary">Vocabulary</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.lookup_index">
+<span class="sig-name descname"><span class="pre">lookup_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.lookup_index" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the token associated with the index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index to look up.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The token corresponding to the index.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If the index is not in the vocabulary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.lookup_token">
+<span class="sig-name descname"><span class="pre">lookup_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.lookup_token" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the index associated with the token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – The token to look up.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index corresponding to the token.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="surnames_generator.utils.vocabulary.Vocabulary.to_serializable">
+<span class="sig-name descname"><span class="pre">to_serializable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#surnames_generator.utils.vocabulary.Vocabulary.to_serializable" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary that can be serialized.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-surnames_generator.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-surnames_generator.utils" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="surnames_generator.factories.html" class="btn btn-neutral float-left" title="surnames_generator.factories package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Konstantinos Kanaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
