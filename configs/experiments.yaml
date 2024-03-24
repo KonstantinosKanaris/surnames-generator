@@ -11,10 +11,13 @@
 # - experiments             : List of training experiments.
 # - num_epochs              : An integer indicating how many epochs to train for.
 # - batch_size              : How many samples per batch to load.
-# - optimizer_name          : The name of the optimizer to use for training.
+# - optimizer_name          : The name of the optimizer to use for training. Available
+#                             optimizers: `adam`, and `sgd`
 # - model_name              : The name of the model to train. Available models:
-#                             `simple_rnn_generator`, `gru_generator`, `lstm_generator`.
-# - loss_name               : The name of the loss function to use.
+#                             `simple_rnn_generator`, `gru_generator`, and
+#                             `lstm_generator`.
+# - loss_name               : The name of the loss function to use. Available losses:
+#                             `nll`, and `cross_entropy`.
 # - lr_patience             : Number of epochs to wait before reducing the learning
 #                             rate.
 # - lr_reduce_factor        : How much to reduce the learning rate, i.e. lr * factor
@@ -37,17 +40,55 @@ experiments:
   -
     general_hyperparameters:
       num_epochs: 300
-      batch_size: 64
+      batch_size: 128
+      optimizer_name: adam
+      model_name: simple_rnn_generator
+      loss_name: nll
+      lr_patience: 5
+      lr_reduce_factor: 0.25
+      ea_patience: 10
+      ea_delta: 0
+    model_init_params:
+      embedding_dim: 100
+      hidden_size: 100
+      dropout: 0.1
+      num_layers: 1
+      with_condition: True
+    optimizer_init_params:
+      lr: 0.001
+  -
+    general_hyperparameters:
+      num_epochs: 300
+      batch_size: 128
+      optimizer_name: adam
+      model_name: gru_generator
+      loss_name: nll
+      lr_patience: 5
+      lr_reduce_factor: 0.25
+      ea_patience: 10
+      ea_delta: 0
+    model_init_params:
+      embedding_dim: 100
+      hidden_size: 100
+      dropout: 0.1
+      num_layers: 1
+      with_condition: True
+    optimizer_init_params:
+      lr: 0.001
+  -
+    general_hyperparameters:
+      num_epochs: 300
+      batch_size: 128
       optimizer_name: adam
       model_name: lstm_generator
       loss_name: nll
-      lr_patience: 3
+      lr_patience: 5
       lr_reduce_factor: 0.25
-      ea_patience: 7
+      ea_patience: 10
       ea_delta: 0
     model_init_params:
-      embedding_dim: 50
-      hidden_size: 50
+      embedding_dim: 100
+      hidden_size: 100
       dropout: 0.1
       num_layers: 1
       with_condition: True

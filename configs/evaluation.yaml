@@ -16,10 +16,10 @@
 data_path: ./data/surnames/processed/train.csv
 model_path: ./checkpoints/lstmgenerator_conditioned.pth
 model_name: lstm_generator
-num_samples: 3
+num_samples: 10
 model_init_params:
-  embedding_dim: 50
-  hidden_size: 50
+  embedding_dim: 100
+  hidden_size: 100
   dropout: 0.1
   num_layers: 1
   with_condition: True

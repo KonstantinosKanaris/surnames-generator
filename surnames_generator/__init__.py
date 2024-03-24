@@ -39,10 +39,19 @@ __all__ = [
     "logger",
 ]
 
-log_config_fpath = os.path.join(
-    "/Users/galileo/Documents/projects/surnames-generator/surnames_generator/logger/logging.ini"
-)
+CWD = os.getcwd()
+rootdir = os.path.dirname(CWD)
+basename = os.path.basename(CWD)
 
+
+if basename == "docs":
+    basename = ""
+
+if basename == "source":
+    basename = ""
+    rootdir = os.path.dirname(rootdir)
+
+log_config_fpath = os.path.join(rootdir, basename, "configs/logging.ini")
 
 for name in [
     "matplotlib",

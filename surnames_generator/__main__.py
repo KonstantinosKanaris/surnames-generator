@@ -62,12 +62,11 @@ def parse_arguments() -> argparse.Namespace:
 if __name__ == "__main__":
     arguments = parse_arguments()
 
+    config = load_yaml_file(filepath=arguments.config)
+    dataset = SurnamesDataset.load_dataset_from_csv(
+        surnames_csv=config["data_path"]
+    )
     if arguments.mode == "train":
-        config = load_yaml_file(filepath=arguments.config)
-        dataset = SurnamesDataset.load_dataset_from_csv(
-            surnames_csv=config["data_path"]
-        )
-
         for i, experiment in enumerate(config["experiments"]):
             logger.info(f"Experiment {i+1}")
             training_controller = TrainingController(
@@ -77,10 +76,6 @@ if __name__ == "__main__":
             )
             training_controller.prepare_and_start_training()
     elif arguments.mode == "generate":
-        config = load_yaml_file(filepath=arguments.config)
-        dataset = SurnamesDataset.load_dataset_from_csv(
-            surnames_csv=config["data_path"]
-        )
         vectorizer = dataset.get_vectorizer()
         generator_controller = SurnamesGeneratorController(
             model_path=config["model_path"],

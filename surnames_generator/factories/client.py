@@ -134,7 +134,8 @@ class Client:
                 logger.error(f"Unsupported optimizer name: `{name}`.")
                 raise ValueError(
                     f"Unsupported optimizer name: `{name}`. "
-                    f"Choose one of the following: {self.__class__._available_optimizers}"
+                    f"Choose one of the following: "
+                    f"{self.__class__._available_optimizers}"
                 )
 
         optimizer_kwargs = self.init_params["optimizer_init_params"]

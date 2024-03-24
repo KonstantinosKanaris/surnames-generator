@@ -94,13 +94,15 @@ class CharacterVectorizer:
         from_indices = indices[:-1]
         observations[: len(from_indices)] = torch.tensor(
             from_indices, dtype=torch.int64
-        )
-        observations[len(from_indices) :] = self.char_vocab.mask_index
+        )  # noqa: E203
+        observations[len(from_indices) :] = self.char_vocab.mask_index  # noqa: E203
 
         targets = torch.empty(size=(vector_length,), dtype=torch.int64)
         to_indices = indices[1:]
-        targets[: len(to_indices)] = torch.tensor(to_indices, dtype=torch.int64)
-        targets[len(to_indices) :] = self.char_vocab.mask_index
+        targets[: len(to_indices)] = torch.tensor(
+            to_indices, dtype=torch.int64
+        )  # noqa: E203
+        targets[len(to_indices) :] = self.char_vocab.mask_index  # noqa: E203
 
         return observations, targets
 

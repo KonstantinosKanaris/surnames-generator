@@ -51,7 +51,7 @@ class TrainingController:
     Example:
 
         >>> # Create the SurnamesDataset from the dataset's csv file
-        >>> from surnames_generator.data.datasets import SurnamesDataset
+        >>> from surnames_generator.datasets import SurnamesDataset
         >>> dataset = SurnamesDataset.load_dataset_from_csv(
         ...     surnames_csv="./path/to/csv/train.csv"
         ... )
